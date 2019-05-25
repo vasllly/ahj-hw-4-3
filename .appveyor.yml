@@ -14,7 +14,7 @@ install:
 build: off
 
 build_script:
-- yarn build && yarn start # команда сборки
+- yarn start # команда сборки
 
 test_script:
   - yarn lint && yarn test && yarn e2e # скрипт сборки

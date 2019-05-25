@@ -37,6 +37,9 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.4"
   },
+  "jest": {
+    "command": "yarn start"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint && yarn test && yarn e2e"
