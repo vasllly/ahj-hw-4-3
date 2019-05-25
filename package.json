@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "test": "jest --coverage --passWithNoTests",
+    "test": "jest --coverage",
+    "e2e": "jest --testPathPattern='./e2e/'",
     "lint": "eslint .",
     "build": "webpack --mode production"
   },
@@ -28,6 +29,7 @@
     "husky": "^2.1.0",
     "jest": "^24.7.1",
     "mini-css-extract-plugin": "^0.6.0",
+    "puppeteer": "^1.17.0",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.1",
     "webpack-dev-server": "^3.3.1"
@@ -37,7 +39,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint && yarn test"
+      "pre-commit": "yarn lint && yarn test && yarn e2e"
     }
   }
 }
